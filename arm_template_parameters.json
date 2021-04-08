@@ -1,0 +1,75 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "value": "eusdesgdatafactory"
+        },
+        "LS_ADLS_ESG_accountKey": {
+            "value": ""
+        },
+        "LS_AZSQLDB_ESG_connectionString": {
+            "value": ""
+        },
+        "LS_ESG_SQLSERVER_connectionString": {
+            "value": ""
+        },
+        "SCD_connectionString": {
+            "value": ""
+        },
+        "RioTintoDemo_connectionString": {
+            "value": ""
+        },
+        "DeltaLoad_accessToken": {
+            "value": ""
+        },
+        "LS_ENBRDG_accountKey": {
+            "value": ""
+        },
+        "AzureSqlDatabase1_connectionString": {
+            "value": ""
+        },
+        "LS_TALKWALKER_password": {
+            "value": ""
+        },
+        "LS_ADLS_ESG_properties_typeProperties_url": {
+            "value": "https://eusdesgadls01.dfs.core.windows.net"
+        },
+        "RestService1_properties_typeProperties_url": {
+            "value": "http://api.worldweatheronline.com"
+        },
+        "LS_ENBRDG_properties_typeProperties_url": {
+            "value": "https://esudenbridgeadls01.dfs.core.windows.net"
+        },
+        "LS_TALKWALKER_properties_typeProperties_url": {
+            "value": "http://api.talkwalker.com"
+        },
+        "LS_TALKWALKER_properties_typeProperties_userName": {
+            "value": "esguser01"
+        },
+        "TG_ESG_SMART_FETCH_DATAPIPELINE_properties_typeProperties_scope": {
+            "value": "/subscriptions/97ecac89-4e79-4d22-a067-00cda909fbd8/resourceGroups/EUS-RGD-ESG01/providers/Microsoft.Storage/storageAccounts/eusdesgadls01"
+        },
+        "TG_SMART_FETCH_NEGATIVESEARCH_properties_typeProperties_scope": {
+            "value": "/subscriptions/97ecac89-4e79-4d22-a067-00cda909fbd8/resourceGroups/EUS-RGD-ESG01/providers/Microsoft.Storage/storageAccounts/eusdesgadls01"
+        },
+        "TG_SMARTFETCH_REGULATORY_URL_properties_typeProperties_scope": {
+            "value": "/subscriptions/97ecac89-4e79-4d22-a067-00cda909fbd8/resourceGroups/EUS-RGD-ESG01/providers/Microsoft.Storage/storageAccounts/eusdesgadls01"
+        },
+        "TG-SMARTFETCH_NEGATIVE_URL_properties_typeProperties_scope": {
+            "value": "/subscriptions/97ecac89-4e79-4d22-a067-00cda909fbd8/resourceGroups/EUS-RGD-ESG01/providers/Microsoft.Storage/storageAccounts/eusdesgadls01"
+        },
+        "TG_NegativeURL_OECDWATCH_properties_typeProperties_scope": {
+            "value": "/subscriptions/97ecac89-4e79-4d22-a067-00cda909fbd8/resourceGroups/EUS-RGD-ESG01/providers/Microsoft.Storage/storageAccounts/eusdesgadls01"
+        },
+        "TG-SMARTFETCH_NEGATIVE_URL_UnGlobalCompact_properties_typeProperties_scope": {
+            "value": "/subscriptions/97ecac89-4e79-4d22-a067-00cda909fbd8/resourceGroups/EUS-RGD-ESG01/providers/Microsoft.Storage/storageAccounts/eusdesgadls01"
+        },
+        "TG-SMARTFETCH_NEGATIVE_URL_Humanrights_properties_typeProperties_scope": {
+            "value": "/subscriptions/97ecac89-4e79-4d22-a067-00cda909fbd8/resourceGroups/EUS-RGD-ESG01/providers/Microsoft.Storage/storageAccounts/eusdesgadls01"
+        },
+        "TG_TW_EXTRACT_properties_typeProperties_scope": {
+            "value": "/subscriptions/97ecac89-4e79-4d22-a067-00cda909fbd8/resourceGroups/EUS-RGD-ESG01/providers/Microsoft.Storage/storageAccounts/eusdesgadls01"
+        }
+    }
+}
