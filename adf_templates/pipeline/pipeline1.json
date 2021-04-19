@@ -27,8 +27,7 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"tableOption": "autoCreate"
+						"type": "AzureSqlSink"
 					},
 					"enableStaging": false,
 					"translator": {
@@ -51,12 +50,20 @@
 						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference",
 						"parameters": {
-							"serber name": "eusdevlearning01.database.windows.net"
+							"datasetservername": {
+								"value": "@pipeline().parameters.pipelienservername",
+								"type": "Expression"
+							}
 						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"pipelienservername": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }

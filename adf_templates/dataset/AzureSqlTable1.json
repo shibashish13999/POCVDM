@@ -3,10 +3,16 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AZSQLDB_LS",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"server name": {
+					"value": "@dataset().datasetservername",
+					"type": "Expression"
+				}
+			}
 		},
 		"parameters": {
-			"serber name": {
+			"datasetservername": {
 				"type": "string"
 			}
 		},
