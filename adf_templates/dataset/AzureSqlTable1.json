@@ -1,0 +1,20 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZSQLDB_LS",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"server name": "eusdevlearning01.database.windows.net",
+				"User name": "dev"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employee"
+		}
+	}
+}
