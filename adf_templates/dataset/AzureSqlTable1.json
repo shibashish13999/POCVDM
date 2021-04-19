@@ -3,10 +3,11 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AZSQLDB_LS",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"server name": "eusdevlearning01.database.windows.net",
-				"User name": "dev"
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"serber name": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
