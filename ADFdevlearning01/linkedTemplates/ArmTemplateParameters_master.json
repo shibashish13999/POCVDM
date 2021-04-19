@@ -7,6 +7,12 @@
 		},
 		"AZSQLDB_LS_connectionString": {
 			"value": ""
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
 		}
 	}
 }

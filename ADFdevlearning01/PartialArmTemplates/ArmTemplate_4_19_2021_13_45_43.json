@@ -6,10 +6,6 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "ADFdevlearning01"
-		},
-		"AZSQLDB_LS_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AZSQLDB_LS'"
 		}
 	},
 	"variables": {
@@ -57,15 +53,13 @@
 						"inputs": [
 							{
 								"referenceName": "AzureSqlTable1",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "AzureSqlTable1",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
@@ -95,29 +89,6 @@
 				"typeProperties": {
 					"schema": "dbo",
 					"table": "employee"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AZSQLDB_LS')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AZSQLDB_LS')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"parameters": {
-					"server name": {
-						"type": "string"
-					},
-					"User name": {
-						"type": "string"
-					}
-				},
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('AZSQLDB_LS_connectionString')]"
 				}
 			},
 			"dependsOn": []
