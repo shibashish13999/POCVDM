@@ -32,9 +32,6 @@
 				"parameters": {
 					"server name": {
 						"type": "string"
-					},
-					"User name": {
-						"type": "string"
 					}
 				},
 				"annotations": [],
@@ -69,10 +66,16 @@
 			"properties": {
 				"linkedServiceName": {
 					"referenceName": "AZSQLDB_LS",
-					"type": "LinkedServiceReference"
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"server name": {
+							"value": "@dataset().datasetservername",
+							"type": "Expression"
+						}
+					}
 				},
 				"parameters": {
-					"serber name": {
+					"datasetservername": {
 						"type": "string"
 					}
 				},
@@ -156,8 +159,7 @@
 								}
 							},
 							"sink": {
-								"type": "AzureSqlSink",
-								"tableOption": "autoCreate"
+								"type": "AzureSqlSink"
 							},
 							"enableStaging": false,
 							"translator": {
@@ -181,12 +183,20 @@
 								"referenceName": "AzureSqlTable1",
 								"type": "DatasetReference",
 								"parameters": {
-									"serber name": "eusdevlearning01.database.windows.net"
+									"datasetservername": {
+										"value": "@pipeline().parameters.pipelienservername",
+										"type": "Expression"
+									}
 								}
 							}
 						]
 					}
 				],
+				"parameters": {
+					"pipelienservername": {
+						"type": "string"
+					}
+				},
 				"annotations": []
 			},
 			"dependsOn": [
