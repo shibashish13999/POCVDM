@@ -20,11 +20,19 @@
 		},
 		"schema": [
 			{
-				"name": "id",
+				"name": "Id",
 				"type": "String"
 			},
 			{
-				"name": "name",
+				"name": "Emp_name",
+				"type": "String"
+			},
+			{
+				"name": "Emp_salary",
+				"type": "String"
+			},
+			{
+				"name": "Emp_Bonus",
 				"type": "String"
 			}
 		]

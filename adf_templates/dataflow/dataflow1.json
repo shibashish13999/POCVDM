@@ -1,0 +1,27 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "test",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "DerivedColumn1"
+				},
+				{
+					"name": "Rank1"
+				}
+			],
+			"script": "source(output(\n\t\tId as string,\n\t\tEmp_name as string,\n\t\tEmp_salary as string,\n\t\tEmp_Bonus as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\twildcardPaths:['test.csv']) ~> source1\nsource1 derive(Total_Sal = toInteger(Emp_salary)+ toInteger(Emp_Bonus)) ~> DerivedColumn1\nDerivedColumn1 rank(desc(Total_Sal, true),\n\toutput(Rank as long)) ~> Rank1"
+		}
+	}
+}
